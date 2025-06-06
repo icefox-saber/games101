@@ -67,8 +67,8 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
   float h = tanf(eye_fov / 2) * zNear;
   float w = h * aspect_ratio;
   // 这里1表示压缩比，后续对点(x,y,z,1)使用此矩阵时，1*z
-  projection << zNear / w, 0, 0, 0, 0, zNear / h, 0, 0, 0, 0, (zNear + zFar),
-      -zNear * zFar, 0, 0, -1, 0;
+  projection << zNear / w, 0, 0, 0, 0, zNear / h, 0, 0, 0, 0, (zNear + zFar)/(zFar-zNear),
+      -zNear * zFar/(zFar-zNear), 0, 0, -1, 0;
   // TODO: Implement this function
   // Create the projection matrix for the given parameters.
   // Then return it.
