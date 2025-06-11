@@ -23,4 +23,8 @@ add_test(NAME texture_test
 add_test(NAME bump_test
          COMMAND ./Rasterizer3 bump.png  bump
          WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+
+add_test(NAME displacement_test
+         COMMAND ./Rasterizer3 displacement.png  displacement
+         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 #target_compile_options(Rasterizer PUBLIC -Wall -Wextra -pedantic)
