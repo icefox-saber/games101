@@ -41,7 +41,7 @@ Eigen::Matrix4f get_rotation(Vector3f axis, float angle) {
 Eigen::Matrix4f get_model_matrix(float rotation_angle) {
 
   return get_rotation({0, 0, -1}, rotation_angle);
-
+}
 
 Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
                                       float zNear, float zFar) {
